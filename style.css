@@ -1,0 +1,647 @@
+/* -------------------- Global -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #ffe4b3, #ff8c00);
+}
+
+/* -------------------- Navbar -------------------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3e50;
+    padding: 15px 60px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h2 {
+    color: #ff8c00;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+.log-sign button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: whitesmoke;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.log-sign .sign-up {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+}
+
+.log-sign button:hover {
+    opacity: 0.8;
+}
+
+/* -------------------- Hero -------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    min-height: 90vh;
+}
+
+.content {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 48px;
+    color: #4a148c;
+    margin-bottom: 25px;
+}
+
+#typing-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    min-height: 70px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #4a148c;
+    animation: blink 0.7s infinite;
+    vertical-align: bottom;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Search Box */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search input {
+    flex: 1 1 300px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+.search button {
+    padding: 12px 22px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.search button:hover {
+    opacity: 0.9;
+}
+/* -------------------- Overview -------------------- */
+#overview {
+    background: linear-gradient(90deg, #fff0cc, #ffc266);
+    color: #333;
+    padding: 60px 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    border-top: 2px solid #ffb84d;
+}
+
+/* -------------------- About Us -------------------- */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1100px;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 200px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* -------------------- Products -------------------- */
+#products {
+    text-align: center;
+    padding: 50px 0;
+    background: #f9fafc;
+}
+
+#products h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+.product-card p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.sample-btn {
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sample-btn:hover {
+    background: #0056b3;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+footer h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+footer .contact-info {
+    margin: 15px 0;
+}
+
+footer .contact-info p strong {
+    color: #222;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* -------------------- Catalog Page -------------------- */
+.catalog {
+    padding: 60px 40px;
+    text-align: center;
+    background: linear-gradient(90deg, #ffe4b3, #ff8c00);
+    min-height: 100vh;
+}
+
+.catalog h1 {
+    font-size: 40px;
+    color: #4a148c;
+    margin-bottom: 40px;
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.book-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.book-card p {
+    color: #555;
+    font-size: 15px;
+}
+.not-found {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.not-found h2 {
+    color: #4a148c;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.not-found button {
+    padding: 12px 25px;
+    background-color: #ff8c00; /* Hero section ke color ke match */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.not-found button:hover {
+    background-color: #e67e22; /* Thoda dark on hover */
+}
+/* -------------------- Responsive -------------------- */
+@media (max-width: 1200px) {
+    .header {
+        padding: 15px 30px;
+    }
+    .content {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .log-sign {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .log-sign button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 35px 25px;
+    }
+
+    #typing-text {
+        font-size: 16px;
+    }
+
+    .search input {
+        min-width: 200px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .books-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .not-found button {
+        width: 80%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 15px;
+        gap: 10px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .log-sign button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    #typing-text {
+        font-size: 15px;
+    }
+
+    .search input {
+        min-width: 180px;
+        font-size: 14px;
+    }
+
+    .search button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .cards .card h3 {
+        font-size: 18px;
+    }
+
+    .cards .card p {
+        font-size: 14px;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 13px;
+    }
+
+    .sample-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .book-card h3 {
+        font-size: 16px;
+    }
+
+    .book-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding: 30px 15px;
+        max-width: 90%;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    #typing-text {
+        font-size: 14px;
+    }
+
+    .search input {
+        min-width: 150px;
+        font-size: 13px;
+    }
+
+    .search button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .log-sign button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .cards .card h3 {
+        font-size: 16px;
+    }
+
+    .cards .card p {
+        font-size: 13px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .product-card p {
+        font-size: 12px;
+    }
+
+    .sample-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .book-card h3 {
+        font-size: 14px;
+    }
+
+    .book-card p {
+        font-size: 12px;
+    }
+
+    .not-found h2 {
+        font-size: 18px;
+    }
+
+    .not-found button {
+        width: 90%;
+        font-size: 14px;
+    }
+}
